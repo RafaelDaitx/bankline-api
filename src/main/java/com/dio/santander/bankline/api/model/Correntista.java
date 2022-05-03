@@ -23,7 +23,7 @@ public class Correntista {
 	
 	@Embedded
 	private Conta conta;
-	public Conta getConte() {
+	public Conta getConta() {
 		return conta;
 	}
 	public void setConta(Conta conta) {
