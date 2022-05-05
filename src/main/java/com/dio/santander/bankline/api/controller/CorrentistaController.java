@@ -17,23 +17,19 @@ import com.dio.santander.bankline.api.service.CorrentistaService;
 @RestController
 @RequestMapping("/correntistas")
 public class CorrentistaController {
-	
 	@Autowired
 	private CorrentistaRepository repository;
 	
 	@Autowired
 	private CorrentistaService service;
 	
-	//Resposta http
 	@GetMapping
 	public List<Correntista> findAll(){
 		return repository.findAll();
-		//Trazer correntistas do banco
 	}
 	
 	@PostMapping
 	public void save(@RequestBody NovoCorrentista correntista) {
 		service.save(correntista);
-		///Espera um novo correntista para poder salvar
 	}
 }

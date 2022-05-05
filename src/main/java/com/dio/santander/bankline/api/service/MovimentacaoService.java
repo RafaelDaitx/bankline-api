@@ -26,7 +26,7 @@ public class MovimentacaoService {
 		Double valor = novaMovimentacao.getTipo() == MovimentacaoTipo.RECEITA ? novaMovimentacao.getValor() : novaMovimentacao.getValor() * -1;
 		///Conferir se é despesa ou receita, para valor ficar negativo ou positivo de acordo com o tipo de movimentação
 		
-		movimentacao.setData(LocalDateTime.now());
+		movimentacao.setDataHora(LocalDateTime.now());
 		movimentacao.setDescricao(novaMovimentacao.getDescricao());
 		movimentacao.setIdConta(novaMovimentacao.getIdConta());
 		movimentacao.setTipo(novaMovimentacao.getTipo());
